@@ -4,7 +4,7 @@
 # Create default app zip
 rm -rf build
 mkdir build
-(cd application && zip -r ../build/o.map.zip ./*)
+(cd application && zip -r ../build/o.map.zip ./* -x ./manifest.webmanifest)
 
 (cd application && zip -r ../build/o.map-kaios3.zip ./* -x ./manifest.webapp)
 
