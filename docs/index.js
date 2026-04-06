@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     el.insertAdjacentHTML(
       "afterend",
-      '<div class="item" data-type="map" data-url="https://a.tile.openstreetmap.de/{z}/{x}/{y}.png" data-maxzoom="18" data-attribution="Map data &copy; OpenStreetMap contributors, CC-BY-SA">Openstreetmap</div>'
+      '<div class="item" data-type="map" data-url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" data-maxzoom="18" data-attribution="Map data &copy; OpenStreetMap contributors, CC-BY-SA">Openstreetmap</div>'
     );
 
     document
