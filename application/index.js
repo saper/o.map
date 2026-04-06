@@ -401,50 +401,8 @@ document.addEventListener("DOMContentLoaded", function () {
       );
   };
 
-  //load KaiOs ads or not
-  let load_ads = function () {
-    var js = document.createElement("script");
-    js.type = "text/javascript";
-    js.src = "assets/js/kaiads.v5.min.js";
-
-    js.onload = function () {
-      getKaiAd({
-        publisher: "4408b6fa-4e1d-438f-af4d-f3be2fa97208",
-        app: "omap",
-        slot: "omap",
-        test: 0,
-        timeout: 40000,
-        h: 220,
-        w: 220,
-        container: document.getElementById("kaios-ads"),
-        onerror: (err) => console.error("Error:", err),
-        onready: (ad) => {
-          ad.on("close", () => console.log("close event"));
-
-          // user clicked the ad
-          ad.on("click", () => console.log("click event"));
-
-          // user closed the ad (currently only with fullscreen)
-          ad.on("close", () => console.log("close event"));
-
-          // the ad succesfully displayed
-          ad.on("display", () => console.log("display event"));
-
-          // Ad is ready to be displayed
-          // calling 'display' will display the ad
-          ad.call("display", {
-            navClass: "item",
-            display: "block",
-          });
-        },
-      });
-    };
-    document.head.appendChild(js);
-  };
-
   if (status.os != "default") {
     app_launcher();
-    load_ads();
   } else {
     oauthRedirect();
   }

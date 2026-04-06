@@ -935,15 +935,6 @@ div#files-option div:focus {
   color: black;
 }
 
-/*ADS*/
-
-div#kaios-ads {
-  min-height: 240px;
-  max-height: 240px;
-  min-width: 240px;
-  padding: 0px;
-}
-
 div#result-container {
   background: rgb(216, 216, 216) !important;
   max-height: 60vh;
